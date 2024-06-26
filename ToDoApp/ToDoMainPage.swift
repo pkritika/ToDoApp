@@ -18,6 +18,7 @@ struct ToDoMainPage: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("To Do List")
+            .foregroundColor(.blue)
             .navigationBarItems(trailing: NavigationLink("+",destination: Text("Destination")))
         
     }
