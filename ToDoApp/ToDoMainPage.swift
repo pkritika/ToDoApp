@@ -51,11 +51,7 @@ struct ToDoMainPage: View {
             }
             .environmentObject(ListViewModel())
         }
-        
-        func Add() {
-            // sign-in functionality here
-            print("lets go button tapped")
-        }
+
         
         struct ListRowView: View {
             let item: model

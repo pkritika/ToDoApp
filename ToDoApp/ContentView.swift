@@ -30,11 +30,6 @@ struct ContentView: View {
         }
         .padding()
     }
-    
-    func LetsGo() {
-            // sign-in functionality here
-            print("lets go button tapped")
-        }
 }
 
 #Preview {
