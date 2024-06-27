@@ -15,8 +15,9 @@
 		12FDF7A12C2B59D700F8C3D0 /* ToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7A02C2B59D700F8C3D0 /* ToDoAppUITests.swift */; };
 		12FDF7A32C2B59D700F8C3D0 /* ToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7A22C2B59D700F8C3D0 /* ToDoAppUITestsLaunchTests.swift */; };
 		12FDF7B02C2B5A0200F8C3D0 /* ToDoMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7AF2C2B5A0200F8C3D0 /* ToDoMainPage.swift */; };
-		12FDF7B22C2B7BA300F8C3D0 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7B12C2B7BA300F8C3D0 /* AddToDo.swift */; };
-		12FDF7B42C2B7BCF00F8C3D0 /* RemoveToDo .swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7B32C2B7BCF00F8C3D0 /* RemoveToDo .swift */; };
+		12FDF7BA2C2CA13700F8C3D0 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7B92C2CA13700F8C3D0 /* model.swift */; };
+		12FDF7BC2C2CAD1000F8C3D0 /* AddtoDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7BB2C2CAD1000F8C3D0 /* AddtoDo.swift */; };
+		12FDF7BE2C2CC27600F8C3D0 /* ListViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDF7BD2C2CC27600F8C3D0 /* ListViewModel .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,9 @@
 		12FDF7A02C2B59D700F8C3D0 /* ToDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppUITests.swift; sourceTree = "<group>"; };
 		12FDF7A22C2B59D700F8C3D0 /* ToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12FDF7AF2C2B5A0200F8C3D0 /* ToDoMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoMainPage.swift; sourceTree = "<group>"; };
-		12FDF7B12C2B7BA300F8C3D0 /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
-		12FDF7B32C2B7BCF00F8C3D0 /* RemoveToDo .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoveToDo .swift"; sourceTree = "<group>"; };
+		12FDF7B92C2CA13700F8C3D0 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		12FDF7BB2C2CAD1000F8C3D0 /* AddtoDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtoDo.swift; sourceTree = "<group>"; };
+		12FDF7BD2C2CC27600F8C3D0 /* ListViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewModel .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,9 @@
 				12FDF7AF2C2B5A0200F8C3D0 /* ToDoMainPage.swift */,
 				12FDF7892C2B59D600F8C3D0 /* Assets.xcassets */,
 				12FDF78B2C2B59D600F8C3D0 /* Preview Content */,
-				12FDF7B12C2B7BA300F8C3D0 /* AddToDo.swift */,
-				12FDF7B32C2B7BCF00F8C3D0 /* RemoveToDo .swift */,
+				12FDF7B92C2CA13700F8C3D0 /* model.swift */,
+				12FDF7BB2C2CAD1000F8C3D0 /* AddtoDo.swift */,
+				12FDF7BD2C2CC27600F8C3D0 /* ListViewModel .swift */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -267,10 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FDF7B02C2B5A0200F8C3D0 /* ToDoMainPage.swift in Sources */,
+				12FDF7BE2C2CC27600F8C3D0 /* ListViewModel .swift in Sources */,
+				12FDF7BC2C2CAD1000F8C3D0 /* AddtoDo.swift in Sources */,
+				12FDF7BA2C2CA13700F8C3D0 /* model.swift in Sources */,
 				12FDF7882C2B59D500F8C3D0 /* ContentView.swift in Sources */,
-				12FDF7B42C2B7BCF00F8C3D0 /* RemoveToDo .swift in Sources */,
 				12FDF7862C2B59D500F8C3D0 /* ToDoAppApp.swift in Sources */,
-				12FDF7B22C2B7BA300F8C3D0 /* AddToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

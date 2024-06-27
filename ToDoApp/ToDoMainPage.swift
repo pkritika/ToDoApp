@@ -8,36 +8,67 @@
 import SwiftUI
 
 struct ToDoMainPage: View {
-    
+    @EnvironmentObject var listViewModel: ListViewModel
+
     var body: some View {
-        
-        @State var items : [String] = [
-        "1", "2", "3"]
-            List{
-                ForEach(items, id:\.self){item in ListRowView(title: item)}
+            List {
+                ForEach(listViewModel.items) { item in
+                    ListRowView(item: item)
+                        .onTapGesture {
+                            withAnimation(.linear){
+                                listViewModel.updateItem(item: item)
+                            }
+                        }
+                }
+                .onDelete(perform: listViewModel.deleteItem)
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("To Do List")
-            .foregroundColor(.blue)
-            .navigationBarItems(trailing: NavigationLink("+",destination: Text("Destination")))
-        
-    }
-    
-}
-
-#Preview {
-    NavigationView{
-        ToDoMainPage()
-    }
-}
-
-struct ListRowView: View {
-    let title: String
-    var body: some View {
-        HStack{
-            Image(systemName: "checkmark.circle")
-            Text(title)
-            Spacer()
+            //.navigationBarTitle("ToDoList", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("ToDoList")
+                        .foregroundColor(.blue)
+                        .font(.largeTitle)
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: AddtoDo()) {
+                        Text("+")
+                            .foregroundColor(.blue)
+                    }
+                }
+              }
+            }
         }
-    }
-}
+ 
+        
+        
+        
+        #Preview {
+            NavigationView{
+                
+                ToDoMainPage()
+            }
+            .environmentObject(ListViewModel())
+        }
+        
+        func Add() {
+            // sign-in functionality here
+            print("lets go button tapped")
+        }
+        
+        struct ListRowView: View {
+            let item: model
+            var body: some View {
+                HStack{
+                    
+                    Image(systemName:item.isCompleted ?  "checkmark.circle": "circle")
+                        .foregroundColor(item.isCompleted ? .green : .red)
+                    Text(item.title)
+                        .foregroundColor(.blue)
+                    Spacer()
+                }
+            }
+        }
+
+    
